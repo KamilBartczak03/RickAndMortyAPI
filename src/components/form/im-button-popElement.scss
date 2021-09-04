@@ -1,0 +1,26 @@
+.popElement{
+  z-index: 1;
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  width: calc(100%);
+  height: calc(100% + 4px);
+  background: var(--mint-green-dark);
+  animation: popElementAnimation forwards 275ms;
+  border-radius: 25px;
+  opacity: .2;
+}
+
+@keyframes popElementAnimation {
+  0%{
+    transform: scale(1);
+  }
+  60%{
+    opacity: .2;
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+    opacity: .1;
+  }
+}

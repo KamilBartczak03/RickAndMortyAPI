@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+html{
+  --primary-color: #324B72;
+  --light-grey: #E0E0E0; 
+  --mint-green: #4EADC5;
+  --mint-green-dark: #4294a8;
+  --error-red: #DE212B;
+}
+
+*,*::before,*::after{
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1rem;
+}
+
+/* global component styles */
+.router-link-active{
+  background: var(--mint-green);
+  color: #fff !important;
+  transition: ease-in-out 75ms all;
+  &:hover{
+    padding-top: 14px;
+    text-decoration: none !important;
+  }
+}

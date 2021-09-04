@@ -1,0 +1,41 @@
+.navbar{
+  background: #fff;
+  user-select: none;
+  height: 66px;
+  width: 100%;
+  border-bottom: solid 24px  var(--mint-green);
+  box-sizing: content-box;
+
+  &__content{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-container{
+    display: flex;
+    height: 66px;
+    align-items: center;
+  }
+  
+  &__logo{
+    height: 42px;
+    width: 144px;
+  }
+
+  &__navigation{
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__link{
+    padding: 10px 17px;
+    text-decoration: none;
+    color: var(--primary-color);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

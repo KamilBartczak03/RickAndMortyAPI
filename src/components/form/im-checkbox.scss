@@ -1,0 +1,31 @@
+.checkbox{
+  user-select: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__box{
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+      background: transparent;
+      border: 2px solid var(--mint-green);
+    border-radius: 4px;
+    
+    &--checked{
+      @extend .checkbox__box;
+      background: var(--mint-green);
+    }
+  }
+
+  &__box-icon{
+    height: 13px;
+    widows: 15px;
+  }
+
+  &__label{
+    margin-left: 10px;
+  }
+
+}

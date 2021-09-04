@@ -1,0 +1,15 @@
+.button{
+  user-select: none;
+  padding: 15px 25px;
+  background: var(--mint-green);
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  &:hover{
+    background: var(--mint-green-dark);
+  }
+
+}
