@@ -16,7 +16,8 @@ html{
   line-height: 1rem;
 }
 
-/* global component styles */
+/* global ui styles */
+
 .router-link-active{
   background: var(--mint-green);
   color: #fff !important;
@@ -25,4 +26,13 @@ html{
     padding-top: 14px;
     text-decoration: none !important;
   }
+}
+
+.page-header {
+  user-select: none;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  color: var(--primary-color);
 }

@@ -1,6 +1,6 @@
 <template>
   <form id="new-message-form">
-    <h1 class="form-header">Send a new message</h1>
+    <h1 class="page-header">Send a new message</h1>
     <im-input v-model="form.state.title" :error="form.error.title" label="Title"/>
     <im-textarea v-model="form.state.message" :error="form.error.message" label="Message"/>
     <im-select
@@ -46,15 +46,6 @@ function handleSubmit(v) {
   margin: auto;
   padding: 30px 20px;
   height: calc(100% - 90px);
-}
-
-.form-header {
-  user-select: none;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 32px;
-  color: var(--primary-color);
 }
 
 .row {
