@@ -1,14 +1,14 @@
 <template>
   <label class="label">
-    <span class="label__text">{{ label }}</span>
+    <span v-bem:label__text--error="error">{{ label }}</span>
     <div v-bem:input--expanded="expanded" v-bem:input--error="error" @keypress="expanded = !expanded" tabindex="0">
       <div
         class="input__head"
         @click="expanded = !expanded"
       >
         <span class="input__head-text">
-          <b v-if="modelValue">{{ modelValue.name }}</b>
-          <div v-else-if="placeholder">{{ placeholder }}</div>
+          <b  v-if="modelValue" v-bem:input__head-value--error="error">{{ modelValue.name }}</b>
+          <div  v-else-if="placeholder" v-bem:input__head-value--error="error">{{ placeholder }}</div>
         </span>
         <img class="spin" v-bem:input__head-loader--shown="loading" src="@/assets/loading.svg" />
         <img v-bem:input__head-icon--expanded="expanded" src="@/assets/options_arrow.svg" />

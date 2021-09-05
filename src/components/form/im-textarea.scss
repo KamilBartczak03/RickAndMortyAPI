@@ -4,6 +4,11 @@
   flex-direction: column;
   width: 100%;
   font-weight: 400;
+  margin-bottom: 8px;
+
+  &--error{
+    margin-bottom: 0px;
+  }
 
   &__title {
     z-index: 2;

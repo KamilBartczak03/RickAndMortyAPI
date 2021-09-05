@@ -15,7 +15,7 @@
 
     <div class="row">
       <im-checkbox v-model="form.state.quickpost" label="I want to use InterGalaxy Quickpost™" />
-      <im-button @click.native="form.submit(handleSubmit)">Send</im-button>
+      <im-button class="row__button" @click.native="form.submit(handleSubmit)">Send</im-button>
     </div>
   </form>
 </template>
@@ -61,17 +61,24 @@ function handleSubmit(formValue) {
 </script>
 
 <style lang="scss" scoped>
-#new-message-form {
-  max-width: 500px;
-  margin: auto;
-  padding: 30px 20px;
-  height: calc(100% - 90px);
-}
-
 .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+  &__button{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 412px) {
+  .row{
+    flex-wrap: wrap;
+    &__button{
+      margin-top: 10px;
+    }
+  }
 }
 </style>

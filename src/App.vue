@@ -1,7 +1,9 @@
 <template>
   <div id="app_container">
     <im-navbar :routes="routes"></im-navbar>
-    <router-view/>
+    <div id="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -15,10 +17,3 @@ const routes = reactive([
 </script>
 
 <style lang="scss" src="@/assets/global.scss"></style>
-
-<style lang="scss" scoped>
-  #app_container{
-    height: 100vh;
-    width: 100%;
-  }
-</style>

@@ -3,6 +3,10 @@
   user-select: none;
   &__text {
     color: var(--primary-color);
+
+    &--error {
+      color: var(--error-red);
+    }
   }
 
   &__error-message {
@@ -39,14 +43,14 @@
   &--expanded {
     @extend .input;
     border-radius: 8px 8px 0px 0px;
-    margin-bottom: 158px;
+    margin-bottom: 178px;
   }
 
   &--error {
     border-color: var(--error-red) !important;
   }
 
-  &:focus{
+  &:focus {
     border: 2px solid var(--primary-color);
   }
 
@@ -71,6 +75,12 @@
 
   &__head-text {
     margin-right: 10px;
+  }
+
+  &__head-value {
+    &--error {
+      color: var(--error-red);
+    }
   }
 
   &__head-icon {

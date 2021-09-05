@@ -1,5 +1,5 @@
 <template>
-  <label class="input">
+  <label v-bem:input--error="error">
     <span v-bem:input__title--error="error">{{ label }}</span>
     <textarea
       v-bem:input__field--error="error"
