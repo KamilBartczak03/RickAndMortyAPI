@@ -41,6 +41,6 @@ export default class RickAndMortyAPI{
 
   get characterList(){
     // Zwraca listę postaci bez niepotrzebnych kluczy
-    return computed(() => this.queue.flat().map(ch => ({value: ch.id, name: ch.name})  ))
+    return computed(() => this.queue.flat().map(ch => ({value: ch.id, name: ch.name, avatar: ch.img}) ))
   }
 }

@@ -92,6 +92,6 @@ export default class FormValidator extends Validator {
   //Wywołaj validator i callback
   submit(callback){
     this.clearErrors()
-    this.validate(() => callback())
+    this.validate(() => callback(this.state))
   }
 }

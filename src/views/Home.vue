@@ -21,8 +21,13 @@
 </template>
 
 <script setup>
+import { reactive } from "vue"
+import { useRouter } from "vue-router"
+
 import useValidator from "@/composition/useValidator.js"
 import useRickAndMorty from "@/composition/useRickAndMorty.js"
+import useLocalStorage from "@/composition/useLocalStorage.js"
+
 import messageFormSchema from "@/schemas/messageFormSchema.js"
 
 import imInput from "@/components/form/im-input.vue"
@@ -32,11 +37,26 @@ import imCheckbox from "@/components/form/im-checkbox.vue"
 import imButton from "@/components/form/im-button.vue"
 
 const rimAPI = new useRickAndMorty()
+const form = new useValidator(messageFormSchema)
+const storage = useLocalStorage("messages", reactive([]))
+const router = useRouter()
+
 rimAPI.fetchMoreCharacters()
 
-const form = new useValidator(messageFormSchema)
-function handleSubmit(v) {
-  console.log("f: handleSubmit")
+function handleSubmit(formValue) {
+  
+  const saveMessageInStorage = () => {
+    storage.push({
+      title: formValue.title,
+      character: formValue.character,
+      message: formValue.message,
+      date: Date.now(),
+      quickpost: formValue.quickpost
+    })
+  }
+
+  saveMessageInStorage()
+  router.push("/history?success=true")
 }
 </script>
 

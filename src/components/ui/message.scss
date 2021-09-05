@@ -9,6 +9,7 @@
     width: 48px;
     border-radius: 100%;
     margin: 0 6px;
+    object-fit: cover;
   }
   &__details-text {
     display: flex;
@@ -17,6 +18,19 @@
     justify-content: space-between;
     color: var(--primary-color);
     font-weight: 400;
+  }
+  &__quickpost{
+    display: flex;
+    margin-left: auto;
+    align-items: flex-start;
+    span{
+      font-size: 14px;
+      color: var(--primary-color);
+    }
+  }
+  &__quickpost-icon{
+    margin-right: 7px;
+    height: 13.5px;
   }
   &__text {
     color: var(--primary-color);
