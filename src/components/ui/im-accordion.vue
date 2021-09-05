@@ -18,6 +18,7 @@
 
 <style lang="scss" scoped>
   .accordion{
+    width: 100%;
     &__head{
       user-select: none;
       height: 50px;

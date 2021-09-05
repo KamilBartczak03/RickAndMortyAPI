@@ -9,6 +9,12 @@ html{
   --success-green: #50C878;
 }
 
+@media (max-width: 600px) {
+  html{
+    zoom: 0.8;
+  }
+}
+
 #app_container{
   min-height: 100vh;
   display: grid;
@@ -17,6 +23,7 @@ html{
 }
 
 #container{
+  width: 100%;
   padding: 20px;
   height: 100%;
   display: grid;

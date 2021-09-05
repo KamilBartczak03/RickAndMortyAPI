@@ -7,7 +7,7 @@
       :value="modelValue"
       @input="handleInput"
     ></textarea>
-    <span v-bem:input__error-message--error="error">Please enter the title</span>
+    <span v-bem:input__error-message--error="error">{{error}}</span>
   </label>
 </template>
 

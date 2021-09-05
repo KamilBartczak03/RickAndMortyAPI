@@ -48,20 +48,6 @@ const parseTime = (date) => new Date(date).toLocaleTimeString()
 </script>
 
 <style lang="scss" scoped>
-.about {
-  &__no-data{
-    color: var(--light-grey);
-    text-align: center;
-    display: block;
-  }
-}
-
-@media (max-width: 540px){
-  .about{
-    padding: 0 20px 20px 20px;
-  }
-}
-
 .success-header{
   color: var(--success-green);
 

@@ -8,7 +8,7 @@ export default {
   },
   message: {
     required: true,
-    required_msg: "Please enter the message",
+    required_msg: "Plese enter the message",
     validator(v) {
       if (v.length > 256) return "Message cannot be longer than 256 characters"
     }
