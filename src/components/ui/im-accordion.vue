@@ -16,47 +16,4 @@
   defineProps({title: String})
 </script>
 
-<style lang="scss" scoped>
-  .accordion{
-    width: 100%;
-    &__head{
-      user-select: none;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-weight: 600;
-      color: var(--primary-color);
-      transition: ease-in-out 75ms background;
-      &:hover{
-        background: var(--light-grey);
-      }
-    }
-
-    &__head-text{
-      
-    }
-
-    &__head-arrow{
-      transform: rotate(180deg);
-
-      &--expanded{
-        transform: rotate(0deg);
-      }
-    }
-
-    &__body{
-      height: 0;
-      overflow: hidden;
-      border-bottom: 2px solid var(--light-grey);
-      padding: 0;
-      transition: all ease-in-out 200ms;
-
-      &--expanded{
-        opacity: none;
-        padding: 18px 0;
-        height: auto;
-      }
-    }
-  }
-</style>
+<style lang="scss" scoped src="./im-accordion.scss"></style>
